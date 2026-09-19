@@ -1,11 +1,10 @@
-module Main (main) where
+module Units.TypesSpec (spec) where
 
-import Domain.SquareMeters
-import Domain.Types
+import Units.Types
 import Test.Hspec
 
-main :: IO ()
-main = hspec $ do
+spec :: Spec
+spec = do
   describe "LinearMeters" $ do
     it "rejects negative linear meters" $ do
       mkLinearMeters (-1) `shouldBe` Nothing
@@ -25,12 +24,3 @@ main = hspec $ do
 
     it "accepts positive width" $ do
       fmap widthValue (mkWidth 1500) `shouldBe` Just 1500
-
-  describe "calculateSquareMeters" $ do
-    it "calculates square meters from linear meters and width" $ do
-      let result = do
-            linearMeters <- mkLinearMeters 1500
-            width <- mkWidth 500
-            pure $ squareMetersValue (calculateSquareMeters linearMeters width)
-
-      result `shouldBe` Just 750

@@ -1,4 +1,4 @@
-module Domain.Types
+module Units.Types
   ( LinearMeters,
     mkLinearMeters,
     linearMetersValue,
@@ -11,7 +11,7 @@ module Domain.Types
   )
 where
 
-import Domain.Types.Internal
+import Units.Types.Internal
 
 mkLinearMeters :: Double -> Maybe LinearMeters
 mkLinearMeters value

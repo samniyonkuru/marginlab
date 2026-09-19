@@ -1,10 +1,10 @@
-module Domain.SquareMeters
+module Units.Conversions.SquareMeters
   ( calculateSquareMeters,
   )
 where
 
-import Domain.Types
-import Domain.Types.Internal (SquareMeters (..))
+import Units.Types
+import Units.Types.Internal (SquareMeters (..))
 
 calculateSquareMeters :: LinearMeters -> Width -> SquareMeters
 calculateSquareMeters linearMeters width =

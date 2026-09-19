@@ -1,4 +1,4 @@
-module Domain.Types.Internal
+module Units.Types.Internal
   ( LinearMeters (..),
     Width (..),
     SquareMeters (..),
