@@ -26,7 +26,7 @@ library
     exposed-modules: 
       Units.Types
       Units.Types.Internal
-      Units.Conversions.SquareMeters
+      Units.Conversions.Area
 
     build-depends:    base ^>=4.20.2.0
 
@@ -60,7 +60,7 @@ test-suite marginlab-test
 
     other-modules:
       Units.TypesSpec
-      Units.Conversions.SquareMetersSpec
+      Units.Conversions.AreaSpec
 
     build-depends:
         base ^>=4.20.2.0,

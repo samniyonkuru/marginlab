@@ -1,6 +1,6 @@
-module Units.Conversions.SquareMetersSpec (spec) where
+module Units.Conversions.AreaSpec (spec) where
 
-import Units.Conversions.SquareMeters
+import Units.Conversions.Area
 import Units.Types
 import Test.Hspec
 
@@ -11,6 +11,6 @@ spec = do
       let result = do
             linearMeters <- mkLinearMeters 1500
             width <- mkWidth 500
-            pure $ squareMetersValue (calculateSquareMeters linearMeters width)
+            pure $ squareMetersValue (toSquareMeters linearMeters width)
 
       result `shouldBe` Just 750
