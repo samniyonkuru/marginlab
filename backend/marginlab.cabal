@@ -27,6 +27,7 @@ library
       Units.Types
       Units.Types.Internal
       Units.Conversions.Area
+      Units.Conversions.Mass
 
     build-depends:    base ^>=4.20.2.0
 
@@ -61,6 +62,7 @@ test-suite marginlab-test
     other-modules:
       Units.TypesSpec
       Units.Conversions.AreaSpec
+      Units.Conversions.MassSpec
 
     build-depends:
         base ^>=4.20.2.0,
