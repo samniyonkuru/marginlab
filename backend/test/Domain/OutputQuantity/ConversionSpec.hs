@@ -1,9 +1,9 @@
-module Domain.InputQuantity.ConversionSpec (spec) where
+module Domain.OutputQuantity.ConversionSpec (spec) where
 
 import Test.Hspec
 import Units.Types
-import Domain.InputQuantity.Types
-import Domain.InputQuantity.Conversion
+import Domain.OutputQuantity.Types
+import Domain.OutputQuantity.Conversion
 
 spec :: Spec
 spec = do
@@ -16,7 +16,7 @@ spec = do
             
             pure $
               toLinearMeters
-                (InLinearMeters lm)
+                (OutLinearMeters lm)
 
       fmap linearMetersValue result
         `shouldBe` Just 2000
