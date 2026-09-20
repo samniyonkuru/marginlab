@@ -5,7 +5,7 @@ module Units.Types.Internal
     Pieces (..),
     Width (..),
     Cutoff (..),
-    GramsPerSquareMeter (..),
+    MaterialYield (..),
   )
 where
 
@@ -27,5 +27,5 @@ newtype Width = Width Double
 newtype Cutoff = Cutoff Double
   deriving (Show, Eq)
 
-newtype GramsPerSquareMeter = GramsPerSquareMeter Double
+newtype MaterialYield = MaterialYield Double
   deriving (Show, Eq)

@@ -24,10 +24,10 @@ library
     import:           warnings
 
     exposed-modules: 
+      Domain.InputQuantity.Types
+      Domain.InputQuantity.Conversion
       Units.Types
       Units.Types.Internal
-      Units.Conversions.Area
-      Units.Conversions.Mass
 
     build-depends:    base ^>=4.20.2.0
 
@@ -61,8 +61,7 @@ test-suite marginlab-test
 
     other-modules:
       Units.TypesSpec
-      Units.Conversions.AreaSpec
-      Units.Conversions.MassSpec
+      Domain.InputQuantity.ConversionSpec
 
     build-depends:
         base ^>=4.20.2.0,

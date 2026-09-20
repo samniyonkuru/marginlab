@@ -55,8 +55,8 @@ spec = do
     it "rejects negative width" $ do
       mkWidth (-1) `shouldBe` Nothing
 
-    it "accepts zero width" $ do
-      fmap widthValue (mkWidth 0) `shouldBe` Just 0
+    it "reject zero width" $ do
+      fmap widthValue (mkWidth 0) `shouldBe` Nothing
 
     it "accepts positive width" $ do
       fmap widthValue (mkWidth 1500) `shouldBe` Just 1500
@@ -72,14 +72,14 @@ spec = do
     it "accepts positive cutoff" $ do
       fmap cutoffValue (mkCutoff 1500) `shouldBe` Just 1500
 
--- Grams per square meters
-  describe "GramsPerSquareMeter" $ do
-    it "rejects negative gramsPerSquareMeter" $ do
-      mkGramsPerSquareMeter (-1) `shouldBe` Nothing
+-- Material yield
+  describe "MaterialYield" $ do
+    it "rejects negative material yield" $ do
+      mkMaterialYield (-1) `shouldBe` Nothing
 
-    it "accepts zero gramsPerSquareMeter" $ do
-      fmap gramsPerSquareMeterValue (mkGramsPerSquareMeter 0) `shouldBe` Just 0
+    it "accepts zero material yield" $ do
+      fmap materialYieldValue (mkMaterialYield 0) `shouldBe` Just 0
 
-    it "accepts positive gramsPerSquareMeter" $ do
-      fmap gramsPerSquareMeterValue (mkGramsPerSquareMeter 1500) `shouldBe` Just 1500
+    it "accepts positive material yield" $ do
+      fmap materialYieldValue (mkMaterialYield 1500) `shouldBe` Just 1500
 

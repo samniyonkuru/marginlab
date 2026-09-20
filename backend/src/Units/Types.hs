@@ -14,12 +14,12 @@ module Units.Types
     Width,
     mkWidth,
     widthValue,
-    GramsPerSquareMeter,
     Cutoff,
     mkCutoff,
     cutoffValue,
-    mkGramsPerSquareMeter,
-    gramsPerSquareMeterValue,
+    MaterialYield,
+    mkMaterialYield,
+    materialYieldValue,
   )
 where
 
@@ -64,7 +64,7 @@ piecesValue (Pieces value) = value
 -- Width
 mkWidth :: Double -> Maybe Width
 mkWidth value
-  | value < 0 = Nothing
+  | value <= 0 = Nothing
   | otherwise = Just (Width value)
 
 widthValue :: Width -> Double
@@ -80,11 +80,11 @@ cutoffValue :: Cutoff -> Double
 cutoffValue (Cutoff value) = value
 --
 -- Grams per square meter 
-mkGramsPerSquareMeter :: Double -> Maybe GramsPerSquareMeter
-mkGramsPerSquareMeter value
+mkMaterialYield :: Double -> Maybe MaterialYield
+mkMaterialYield value
   | value < 0 = Nothing
-  | otherwise = Just (GramsPerSquareMeter value)
+  | otherwise = Just (MaterialYield value)
 
-gramsPerSquareMeterValue :: GramsPerSquareMeter -> Double
-gramsPerSquareMeterValue (GramsPerSquareMeter value) = value
+materialYieldValue :: MaterialYield -> Double
+materialYieldValue (MaterialYield value) = value
 
